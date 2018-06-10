@@ -101,14 +101,21 @@ label{
 }
 .navbar-brand {
     float: left;
-    height: 50px;
     padding: 15px 15px;
-    line-height: 20px;
+    /* line-height: 20px;
     text-transform: uppercase;
-    color:#fff !important;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 20px; */
+    position: relative;
+}
+
+.nav-logo {
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 /*****************home ********
 ******************************/
@@ -405,7 +412,7 @@ h2.slide-btm-text{
 }
 /**testimonials**/
 .testimonials{
-    background:url(../img/city5.jpg);
+    background: url(../img/city5.jpg);
     background-size: cover;
     padding: 80px 0;
 }
@@ -460,7 +467,7 @@ h2.slide-btm-text{
 /**cta-2**/
 .cta-2{
     padding: 40px 0;
-    background-color: #333;
+    background-color: rgb(51, 51, 51);
 }
 /**cta-2**/
 .cta-3{
@@ -475,7 +482,7 @@ h2.slide-btm-text{
 }
 /***our services****/
 #services{
-    background: url('../img/services2.jpg');
+    background: linear-gradient(to right bottom, rgba(51, 51, 51,0.8), rgba(51, 51, 51,0.8)), url('../img/services2.jpg');
     background-size: cover;
 }
 .service-icon i{
