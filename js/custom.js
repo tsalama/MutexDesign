@@ -89,7 +89,7 @@ $(document).ready(function() {
         itemsMobile: [479, 1],
         singleItem: false,
         startDragging: true,
-        autoPlay: true
+        autoPlay: 12000
     });
 
 });
