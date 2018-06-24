@@ -140,9 +140,9 @@ label{
 }
 
 @media(max-width:767px){
-    #home{
+    #home {
         background-size: cover;
-        background-position: top;
+        background-position: top !important;
         position: relative;    
     }   
 }
