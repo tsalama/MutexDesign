@@ -4,6 +4,7 @@ html, body{
 }
 body { 
     -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     font-family: 'Lato', sans-serif;
@@ -129,14 +130,24 @@ label{
     background-attachment: fixed;
     background-image: url(../img/deskcompressed.jpg);
     display: table;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
     vertical-align: middle;
     z-index: 1;
 }
+
+@media(max-width:767px){
+    #home{
+        background-size: cover;
+        background-position: top;
+        position: relative;    
+    }   
+}
+
+
 
 #particles-js {
     position: absolute;
@@ -366,13 +377,14 @@ h2.slide-btm-text{
     background-color: #333;
     font-size: 30px;
     margin-bottom: 20px;
+    transition: 0.7s ease-in-out;
     -webkit-transition: 0.7s ease-in-out;
     -moz-transition: 0.7s ease-in-out;
     -ms-transition: 0.7s ease-in-out;
     -o-transition: 0.7s ease-in-out;
-    transition: 0.7s ease-in-out;
 }
 .service-box:hover i{
+    transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
     -moz-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
@@ -451,7 +463,7 @@ h2.slide-btm-text{
 }
 #testi-carousel p{
     color:white;
-    weight: 500;
+    font-weight: 500;
     font-size: 14px;
 }
 /**cta**/
