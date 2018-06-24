@@ -143,6 +143,7 @@ label{
     #home {
         background-size: cover;
         background-position: top !important;
+        background-attachment: initial;
     }   
 }
 
