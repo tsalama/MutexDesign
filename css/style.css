@@ -66,6 +66,7 @@ label{
 }
 .margin-btm-30{
     margin-bottom: 30px;
+    font-weight: 400;
 }
 ::selection {
     background:rgb(33, 150, 243); /* Safari */
@@ -442,13 +443,15 @@ h2.slide-btm-text{
 }
 #testi-carousel h4{
     color:#fff;
-    font-weight: 300;
+    font-weight: 600;
     font-family: 'Lato', sans-serif;
     font-size: 24px;
     line-height: 30px;
 }
 #testi-carousel p{
     color:white;
+    weight: 500;
+    font-size: 14px;
 }
 /**cta**/
 .cta{
