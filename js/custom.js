@@ -196,4 +196,37 @@ $(document).ready(function(){
 });
 
 
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+  }
+  
+
+function submit() {
+    event.preventDefault(); // prevent default submit behaviour
+    var email = $('#newsletter-email').val();
+    if(!validateEmail(email) || email === '') {
+        $('#newsletter-success').html("<div class='alert alert-danger'>");
+        $('#newsletter-success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+        $('#newsletter-success > .alert-danger').append("<strong>Please enter a valid email address.");
+        $('#newsletter-success > .alert-danger').append('</div>');
+        //clear all fields
+        $('#contactForm').trigger("reset");
+
+    } 
+    else {
+        $('#newsletter-success').html("<div class='alert alert-success'>");
+        $('#newsletter-success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+            .append("</button>");
+        $('#newsletter-success > .alert-success')
+            .append("<strong>You have subscribed to our newsletter. </strong>");
+        $('#newsletter-success > .alert-success')
+            .append('</div>');
+    
+        //clear all fields
+        $('#newsletter-email').val("");
+        //$('#newsletter-email').val = '';    
+    }
+}
 	
